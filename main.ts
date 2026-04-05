@@ -322,9 +322,10 @@ Boy = sprites.create(img`
     . . . . . f f f f f f . . . . . 
     . . . . . f f . . f f . . . . . 
     `, SpriteKind.Player)
-Boy.setPosition(25, 5)
+Boy.setPosition(55, 5)
 controller.moveSprite(Boy)
 tiles.setCurrentTilemap(tilemap`level1`)
+scene.cameraFollowSprite(Boy)
 game.onUpdate(function () {
     if (Boy.vx == 0 && Boy.vy == 0) {
         animation.stopAnimation(animation.AnimationTypes.All, Boy)
